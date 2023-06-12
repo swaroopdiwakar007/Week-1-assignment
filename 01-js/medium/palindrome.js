@@ -7,7 +7,14 @@
 */
 
 function isPalindrome(str) {
-  return true;
+  l = str.length - 1
+    l1 = Math.floor((l+1)/2)
+    for (let i = 0; i < l1; i++) {
+        if (str[i] !== str[l - i]) {
+            return false
+        }
+    }
+    return true;
 }
 
 module.exports = isPalindrome;
