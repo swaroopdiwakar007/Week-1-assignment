@@ -8,10 +8,15 @@
 */
 
 function isAnagram(str1, str2) {
-if (str1.split('').sort().toString() === str2.split('').sort().toString()) {
-        return true;
-    }
-    return false;
-}
+  let str11 = str1.toLowerCase().split('').sort().toString().trim()
+  let str21 = str2.toLowerCase().split('').sort().toString().trim()
+  console.log(str11)
+  console.log(str21)
+  if (str11 === str21) {
+          return true;
+      }
+      return false;
+  }
 
-module.exports = isAnagram;
+  
+  module.exports = isAnagram;
