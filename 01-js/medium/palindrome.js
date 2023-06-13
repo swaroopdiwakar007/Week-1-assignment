@@ -7,10 +7,18 @@
 */
 
 function isPalindrome(str) {
-  l = str.length - 1
+  valid_letters = 'qwertyuiopasdfghjklzxcvbnm'
+  str = str.toLowerCase()
+  let str1 = ''
+  for (let i = 0; i < str.length; i++) {
+    if (valid_letters.includes(str[i])) {
+      str1 += str[i]
+    }
+  }
+  l = str1.length - 1
     l1 = Math.floor((l+1)/2)
     for (let i = 0; i < l1; i++) {
-        if (str[i] !== str[l - i]) {
+        if (str1[i] !== str1[l - i]) {
             return false
         }
     }
