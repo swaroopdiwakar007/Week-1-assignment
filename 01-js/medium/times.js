@@ -14,7 +14,7 @@ function calculateTime(n) {
         sum += i
     }
     let endd = new Date()
-    starts = (1000 * endd.getSeconds()) + endd.getMilliseconds()
-    ends = (1000 * startd.getSeconds()) + startd.getMilliseconds()
+    let starts = (1000 * endd.getSeconds()) + endd.getMilliseconds()
+    let ends = (1000 * startd.getSeconds()) + startd.getMilliseconds()
     return (starts - ends)/1000
 }
